@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張伈蕊的個人網站</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 全局設定 */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            background: linear-gradient(135deg, #fce4ec, #f9f9f9);
+            color: #333;
+            margin: 0;
+            padding: 0 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5em;
+            color: #d81b60;
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #e91e63;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        nav ul li a:hover {
+            background-color: #c2185b;
+            transform: translateY(-3px);
+        }
+
+        /* 區塊設計 */
+        section {
+            margin-bottom: 30px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 個人照片設計 - 圓形 */
+        #about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 表格設計 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f8bbd0;
+            color: #ffffff;
+        }
+
+
+        /* 列表樣式 */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        ul li::before {
+            content: '\2022';
+            color: #e91e63;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* 按鈕設計 */
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #f06292;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e91e63;
+            transform: scale(1.05);
+        }
+
+        /* 頁腳 */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8bbd0;
+            color: #fff;
+            border-top: 1px solid #f06292;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        #photos img {
+        width: 300px; /* 設定固定寬度 */
+        height: 200px; /* 設定固定高度 */
+        object-fit: cover; /* 保持圖片比例並填滿框 */
+        border-radius: 10px; /* 圖片加上圓角 */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
+        margin: 10px auto; /* 上下間距與置中 */
+        display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1> 張伈蕊的個人網站</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">關於我</a></li>
+                <li><a href="#experience">學習經歷</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#projects">專案作品</a></li>
+                <li><a href="#video">視訊作品</a></li>
+                <li><a href="#photos">生活照片</a></li>
+                <li><a href="#more-info">更多資訊</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="tips">
+        <h2>貓咪讚嘆</h2>
+        <p>貓咪真是太可愛了！牠們柔軟的毛、靈動的眼神，讓人忍不住想要抱抱牠們。每次看到貓咪的樣子，心情都會變得特別好。</p>
+        <a href="#photos" class="btn">看看更多貓咪</a>
+    </section>
+
+    <section id="about">
+        <h2>關於我</h2>
+        <img src="https://s.yimg.com/ny/api/res/1.2/F2EInj.m63lAde2ChFYfuQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTYzOQ--/https://s.yimg.com/os/creatr-uploaded-images/2024-11/f2ae4c70-ab05-11ef-bcff-49c33dc37535" alt="張伈蕊的照片">
+        <p>在此網站中，將分享我在學習和生活中的點滴。</p>
+        <p><strong>張伈蕊</strong><br>
+        國立台北教育大學 資訊科學系 二年級學生</p>
+        <p>我目前就讀於國立台北教育大學資科系，之前曾是自然系的學生，對人工智慧和程式設計充滿熱情，特別是 Python 和網頁開發。我熱愛藝術創作，也熱愛學習新技術，並將其應用於實際的專案中。此外，我也喜歡旅遊、音樂和閱讀，希望在大學期間能夠充實自己，不斷成長。</p>
+    </section>
+
+    <section id="experience">
+        <h2>學習經歷</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>學習內容</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2022-2024</td>
+                    <td>國立台北教育大學 資訊科學系</td>
+                </tr>
+                <tr>
+                    <td>2023年暑假</td>
+                    <td>XX科技公司實習生</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="skills">
+        <h2>技能</h2>
+        <ul>
+            <li>Java: <span>⭐⭐⭐</span></li>
+            <li>C++: <span>⭐⭐⭐</span></li>
+            <li>Python: <span>⭐⭐⭐⭐⭐</span></li>
+            <li>HTML/CSS: <span>⭐⭐⭐⭐</span></li>
+            <li>JavaScript: <span>⭐⭐⭐</span></li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>專案作品</h2>
+        <p>以下是我參與過的一些專案：</p>
+        <ul>
+            <li>個人網站開發</li>
+            <li>Python 自動化腳本</li>
+            <li>深度學習入門專案</li>
+        </ul>
+    </section>
+    <section id="video">
+        
+        <p>這裡是我製作的視訊作品：</p>
+
+            <article id="section5">
+                <h2>影片作品</h2>
+                <video controls>
+                    <source src="1.mp4" type="video/mp4">
+                </video>
+            </article>
+
+
+    </section>
+
+    <section id="photos">
+        <h2>生活照片</h2>
+        <figure>
+            <img src="https://img.ltn.com.tw/Upload/news/600/2022/11/08/php3PkpTU.jpg" alt="可愛的貓咪">
+            <figcaption>可愛的貓咪</figcaption>
+        </figure>
+        <figure>
+            <img src="https://cdn.cybassets.com/s/files/18929/ckeditor/pictures/content_ec656047-eb32-41cf-93cb-9acfb3d29072.jpg" alt="另一隻可愛的貓咪">
+            <figcaption>另一隻可愛的貓咪</figcaption>
+        </figure>
+    </section>
+
+    <section id="more-info">
+        <h2>更多資訊</h2>
+        <p>學習期間常常會遇到各種挑戰，但不要放棄，保持積極的心態，並尋找適合自己的學習方法。</p>
+        <p>建議參加課外活動和社團，這不僅能幫助拓展人際網絡，還能提升自己的軟實力。</p>
+    </section>
+
+    <footer>
+        <p>聯絡我：<a href="mailto:111212008@personalblog.com">111212008@personalblog.com</a></p>
+        <p>最後更新日期：2024年11月25日</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.276383199089!2d121.5400266253762!3d25.024692927822414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a908a8232611%3A0xeebfb2d71a5025c7!2z5ZyL56uL6Ie65YyX5pWZ6IKy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1732688684546!5m2!1szh-TW!2stw" width="100%" height="400" style="border:0; margin-top: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.276383199089!2d121.5400266253762!3d25.024692927822414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a908a8232611%3A0xeebfb2d71a5025c7!2z5ZyL56uL6Ie65YyX5pWZ6IKy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1732688684546!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>&callback=initMap"></script>
+    
+    </footer>
+</body>
+</html>
+    
+
